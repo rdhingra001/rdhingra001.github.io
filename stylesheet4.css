@@ -111,3 +111,7 @@ body {
 .post-container2 {
   background-color:#cec9c9;
 }
+
+input {
+  margin-left: 16px
+}
