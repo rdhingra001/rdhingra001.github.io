@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
 
 body {
   color: #555;
@@ -112,6 +112,6 @@ body {
   background-color:#cec9c9;
 }
 
-input {
+# {
   margin-left: 16px
 }
