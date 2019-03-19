@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="stylesheet4.css">
+ </head>
+ <body>
+   <div id="header">
+ <div class="container">
+<a href = "index.html";style="PT Sans">My Blog</a>
+<ul>
+  <li>
+    <a href = "about.html">About</a>
+  </li>
+  <li>
+    <a href = "contact.html">Contact</a>
+  </li>
+  <li>
+    <a href = "custom_post.html">Add your own post!</a>
+  </li>
+</ul>
+ </div>
+   </div>
+</head>
+<body onload="checkEdits()">
+<div id="content">
+    <div class="post-container">
+      <div class="post">
+        <div class="post-author">
+          <img src="me.png" width="100" height:"100">
+          <span>Me</span>
+        </div>
+     <p class="post-date">Yesterday</p>
+     <h3 class="post-title">Adding a post</h3>
+     <div class="post-content">
+       <p style="color: blue">Here, write your blogpost, along with your name. This will be sent to me, and added as a post.</p>
+       <p style="color: red">When you are done, be sure to copy and paste your post into the email. That way, I will be able to update the blog!</p>
+      </div>
+    </div>
+</div>
+
+<div id="content">
+    <div class="post-container2">
+      <div class="post">
+        <div class="post-author">
+          <img src="mom.png" height="100" width="100">
+          <span>My Mom</span>
+        </div>
+     <p class="post-date">Today</p>
+     <h3 class="post-title">Adding a post</h3>
+     <div class="post-content">
+       <p style="color: blue">Isn't it very easy!</p>
+      </div>
+    </div>
+</div>
+
+<form action="/action_page.php">
+<input type="text" name="post_title" placeholder="Post Title"><br>
+<input type="text" name="editable_text" placeholder="Your Post"><br>
+<input type="text" name="name" placeholder="Your Full Name"><br>
+<a href="mailto:rdhingra001@hotmail.com">Send</a>
+<script type="text/javascript">
+  function saveEdits() {
+
+  //get the editable element
+  var editElem = document.getElementById("edit");
+
+  //get the edited element content
+  var userVersion = editElem.innerHTML;
+
+  //save the content to local storage
+  localStorage.userEdits = userVersion;
+
+  //write a confirmation to the user
+  document.getElementById("update").innerHTML="Edits saved!";
+
+  }
+
+function checkEdits() {
+
+//find out if the user has previously saved edits
+if(localStorage.userEdits!=null)
+document.getElementById("edit").innerHTML = localStorage.userEdits;
+}
+</script>
+</form>
+
+<div id="footer">
+  <div class="container">
+   <div class="column">
+     <h4 style="color: orange">My Story</h4>
+     <p style="font-family: Chalkboard SE" style="font-color: orange"> Hi there! I'm Ronit, and I'm a student web developer. I know many program languages, and am currently developing over 10 games.</p>
+
+   </div>
+   <div class="column">
+     <h4 style="color: orange">My Links</h4>
+     <p>
+       <a href="https://web.roblox.com/users/183564340/profile">Roblox</a>
+       <br>
+       <a href=tel:978-809-4879>Phone Number</a>
+       <br>
+       <a href="mailto:rdhingra001@hotmail.com">Email</a>
+     </p>
+   </div>
+  </div>
+</div>
+
+</body>
+</html>
